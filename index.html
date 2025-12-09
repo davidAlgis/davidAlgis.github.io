@@ -221,17 +221,6 @@
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white">
-                                    <div class="text-uppercase font-weight-bold">Interopérabilité</div>
-                                    <div>InteropUnityCUDA</div>
-                                </div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/logo_iuc_wide.png" alt="InteropUnityCUDA" />
-                        </div>
-                    </div>
 
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
@@ -246,7 +235,19 @@
                     </div>
 
                     <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalInterop">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <div class="text-uppercase font-weight-bold">Interopérabilité</div>
+                                    <div>InteropUnityCUDA</div>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/logo_iuc_wide.png" alt="InteropUnityCUDA" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModalDot">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
                                 <div class="portfolio-item-caption-content text-center text-white">
                                     <div class="text-uppercase font-weight-bold">pyDot2Dot</div>
@@ -284,12 +285,12 @@
                             <li><strong>CNAM Nouvelle Aquitaine :</strong> Mathématiques pour l'ingénieur, Mathématiques pour le divertissement numérique.</li>
                             <li><strong>Encadrement :</strong> Projets étudiants et alternants (Studio Nyx).</li>
                          </ul>
-                         <div class="text-center mt-4">
+                         <!-- <div class="text-center mt-4">
                              <a class="btn btn-xl btn-outline-light" href="assets/pdf/CV_David_Algis.pdf">
                                  <i class="fas fa-download mr-2"></i>
                                  Télécharger mon CV
                              </a>
-                         </div>
+                         </div> -->
                     </div>
                 </div>
             </div>
@@ -332,7 +333,7 @@
                                         <div class="divider-custom-icon"><i class="fas fa-water"></i></div>
                                         <div class="divider-custom-line"></div>
                                     </div>
-                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/lateral_moving_boat.gif" alt="" />
+                                    <img src="assets/img/portfolio/demoArcBlanc2.jpeg" width=700 />
                                     <p class="mb-5 text-justify">
                                         Dans le cadre de ma thèse CIFRE avec <strong>Studio Nyx</strong> et le laboratoire <strong>XLIM</strong>, j'ai développé un simulateur d'océan temps réel.
                                         <br><br>
@@ -373,7 +374,7 @@
                                         l’immobilier, des objets de la vie quotidienne, mais aussi de changer le parquet ou encore de
                                         personnaliser la tapisserie. <br/>
                                         L'application est développée en <i>C++/Objective-C/Swift</i> et utilise l'<i>API OpenGL</i>. <br/>
-                                        Ma mission était d'ajouter de nouvelles fonctionnalités à l'application et de les formaliser mathématiquement, notamment pouvoir paramétrer la hauteur des murs. Vous pourrez lire plus de détails <a class="btn" href="assets/pdf/Rapport_de_stage.pdf">ici</a>.
+                                        Ma mission était d'ajouter de nouvelles fonctionnalités à l'application et de les formaliser mathématiquement, notamment pouvoir paramétrer la hauteur des murs. 
                                         <p></p>
 
                                         <p></p>
@@ -393,6 +394,83 @@
                                     <i class="fas fa-times fa-fw"></i>
                                     Close Window
                                 </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="portfolio-modal modal fade" id="portfolioModalInterop" tabindex="-1" role="dialog" aria-labelledby="portfolioModalInteropLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalInteropLabel">Interop Unity CUDA</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-microchip"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/logo_iuc_wide.png" alt="InteropUnityCUDA Logo" />
+                                    <p class="mb-5 text-justify">
+                                        Ce projet propose une solution d'interopérabilité entre le moteur <strong>Unity</strong> et <strong>CUDA</strong>. Il permet de créer des objets graphiques (textures, buffers) dans Unity et de les modifier directement via des noyaux CUDA, contournant ainsi les <i>compute shaders</i> pour exploiter toute la puissance de calcul du GPU.
+                                        <br><br>
+                                    </p>
+                                    <div class="mb-5">
+                                        <a href="https://github.com/davidAlgis/InteropUnityCUDA" class="btn btn-dark mx-1" target="_blank">
+                                            <i class="fab fa-github mr-2"></i>Voir sur GitHub
+                                        </a>
+                                        <a href="https://doi.org/10.1002/spe.3414" class="btn btn-info mx-1" target="_blank">
+                                            <i class="fas fa-file-alt mr-2"></i>Lire l'article
+                                        </a>
+                                    </div>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModalDot" tabindex="-1" role="dialog" aria-labelledby="portfolioModalDotLabel" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModalDotLabel">pyDot2Dot</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-pen-fancy"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/pydot2dot.jpeg" alt="Dot to Dot Example" />
+                                    <p class="mb-5 text-justify">
+                                        <strong>Dot to Dot</strong> est un logiciel permettant de transformer automatiquement vos images en puzzles « point à point ». L'outil est à destination d'artistes souhaitant générer et personnaliser rapidement ce style d'image. 
+                                    </p>
+                                    <div class="mb-5">
+                                        <a href="https://github.com/davidAlgis/pyDot2Dot" class="btn btn-dark mx-1" target="_blank">
+                                            <i class="fab fa-github mr-2"></i>Voir sur GitHub
+                                        </a>
+                                    </div>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
