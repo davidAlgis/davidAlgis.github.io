@@ -1,453 +1,321 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="" />
-        <meta name="author" content="" />
-        <title>David Algis - Portfolio</title>
-        <!-- Favicon-->
+        <meta name="description" content="Portfolio de David Algis, Doctorant en Informatique Graphique et Développeur R&D." />
+        <meta name="author" content="David Algis" />
+        <title>David Algis - Recherche & Développement</title>
         <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
-        <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v5.13.0/js/all.js" crossorigin="anonymous"></script>
-        <!-- Google fonts-->
         <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css" />
-        <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        
+        <style>
+            .pub-item { margin-bottom: 1.5rem; }
+            .pub-title { font-weight: bold; font-size: 1.1em; color: #2c3e50; }
+            .pub-authors { font-style: italic; color: #555; }
+            .pub-venue { color: #1abc9c; font-weight: 600; }
+            .tag-badge { font-size: 0.8em; padding: 2px 6px; border-radius: 4px; background-color: #eee; color: #333; margin-left: 5px;}
+            .text-justify { text-align: justify; }
+            #projects .portfolio-item {
+                border: 1px solid #dee2e6;       /* A subtle light gray border */
+                border-radius: 10px;             /* Rounded corners */
+                overflow: hidden;                /* Ensures the image respects the rounded corners */
+                box-shadow: 0 4px 6px rgba(0,0,0,0.1); /* Adds a soft depth */
+                background-color: #fff;          /* White background behind the image */
+                transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+            }
+
+            /* Optional: Small "lift" effect when hovering over the project */
+            #projects .portfolio-item:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+                border-color: #1abc9c;           /* Highlights border with your theme color on hover */
+            }
+        </style>
     </head>
     <body id="page-top">
-        <!-- Navigation-->
         <nav class="navbar navbar-expand-lg bg-secondary text-uppercase fixed-top" id="mainNav">
             <div class="container">
-                <a class="navbar-brand js-scroll-trigger" href="#page-top"></a>
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">David Algis</a>
                 <button class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     Menu
                     <i class="fas fa-bars"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#portfolio">Expériences</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">Formations</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#works">Travaux</a></li>
-                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#contact">Quelques mots sur moi</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#about">À propos</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#publications">Publications</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#projects">Projets R&D</a></li>
+                        <li class="nav-item mx-0 mx-lg-1"><a class="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" href="#education">CV</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- Masthead-->
+        
         <header class="masthead bg-primary text-white text-center">
             <div class="container d-flex align-items-center flex-column">
-                <!-- Masthead Avatar Image-->
-                <img class="masthead-avatar mb-5" src="assets/img/avatar2.png" alt="" />
-                <!-- Masthead Heading-->
+                <img class="masthead-avatar mb-5 rounded-circle" src="assets/img/avatar2.png" alt="David Algis" style="border: 5px solid white;" />
                 <h1 class="masthead-heading text-uppercase mb-0">David Algis</h1>
-                <!-- Icon Divider-->
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-square-root-alt"></i></div>
+                    <div class="divider-custom-icon"><i class="fas fa-code"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-				
-                <p class="masthead-subheading font-weight-light mb-0">Doctorant avec l'université de Poitiers et Studio Nyx</p>
-				<!--<p class="masthead-subheading font-weight-light mb-0">Développeur Gameplay et/ou Thèse CIFRE</p>-->
-                <!-- Masthead Subheading-->
-                <!--<p class="masthead-subheading font-weight-light mb-0">Développeur Unity</p>-->
+                <p class="masthead-subheading font-weight-light mb-0">Développeur R&D chez Studio Nyx</p>
+                <p class="mt-3">
+                    <a class="btn btn-outline-light btn-social mx-1" href="mailto:david.algis@tutamail.com"><i class="fas fa-envelope"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/davidAlgis"><i class="fab fa-github"></i></a>
+                    <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/david-algis-5b34b4171/"><i class="fab fa-linkedin-in"></i></a>
+                    </p>
             </div>
         </header>
-        <!-- Experience Section-->
-        <section class="page-section portfolio" id="portfolio">
+
+        <section class="page-section" id="about">
             <div class="container">
-				<!-- Portfolio Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Experiences</h2>
-                <!-- Icon Divider-->
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">À propos</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-user-graduate"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 mx-auto">
+                        <p class="lead text-justify">
+                            Actuellement <strong>développeur R&D chez Studio Nyx</strong> à Angoulême.  
+                        </p>
+                        <p class="lead text-justify">
+                            Passionné par le jeu vidéo et ses technologies, je m'intéresse à la recherche en informatique graphique et dans le calcul à haute performance. Mes travaux de recherche portent plus précisément sur la simulation d'océan, et le calcul parallèle sur carte graphique afin d'exécuter la simulation en temps réel. 
+                        </p>
+                        <p class="lead text-justify">
+                            En outre, Je m'intéresse aussi à divers autres sujets tels que <a href="https://www.senscritique.com/livre/la_structure_des_revolutions_scientifiques/92520"style="color:#002e45"><i>l'épistémologie</i></a>, <a href="https://www.senscritique.com/livre/La_Formule_du_Savoir/35193012"style="color:#002e45"><i>le Bayésianisme</i></a>, <a href="https://quantum-journal.org/papers/q-2018-08-06-79/pdf/"style="color:#002e45"><i>le calcul quantique</i></a>, <a href="https://arxiv.org/pdf/1108.1791"style="color:#002e45"><i>la théorie de la complexité</i></a> et <a href="https://bibnum.publimath.fr/IST/IST94033.pdf"style="color:#002e45"><i>les fondements des mathématiques</i></a>. <br/>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section bg-light" id="publications">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Publications</h2>
+                <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon"><i class="fas fa-book-open"></i></div>
+                    <div class="divider-custom-line"></div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 mx-auto">
+                        <div class="pub-item">
+                            <div class="pub-title">Arc Blanc: A Real Time Ocean Simulation Framework</div>
+                            <div class="pub-authors">David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau</div>
+                            <div class="pub-venue">Journal of Computer Graphics Techniques (JCGT), Vol. 14, No. 1, p.70-115 2025.</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://jcgt.org/published/0014/01/05/" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-link"></i> Web</a>
+                                <a href="https://arxiv.org/pdf/2503.03326" class="btn btn-sm btn-outline-danger"><i class="fas fa-file-pdf"></i> arXiv</a>
+                                <a href="https://jcgt.org/published/0014/01/05/paper-lowres.pdf" class="btn btn-sm btn-outline-danger"><i class="fas fa-file-pdf"></i> PDF</a>
+                            </div>
+                        </div>
+
+                        <div class="pub-item">
+                            <div class="pub-title">InteropUnityCUDA: A Tool for Interoperability Between Unity and CUDA</div>
+                            <div class="pub-authors">David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau</div>
+                            <div class="pub-venue">Software: Practice and Experience (SPE), Vol. 55, No. 6., p. 1127-1141, 2025.</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://onlinelibrary.wiley.com/doi/10.1002/spe.3414" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-link"></i> DOI</a>
+                                <a href="https://onlinelibrary.wiley.com/doi/pdfdirect/10.1002/spe.3414?download=true" class="btn btn-sm btn-outline-danger"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="https://github.com/davidAlgis/InteropUnityCUDA" class="btn btn-sm btn-outline-dark" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+
+                         <div class="pub-item">
+                            <div class="pub-title">Exploiting Ray Tracing Technology Through OptiX to Compute Particle Interactions with Cutoff in a 3D Environment on GPU</div>
+                            <div class="pub-authors">David Algis, Bérenger Bramas</div>
+                            <div class="pub-venue">International Journal of Advanced Computer Science and Applications (IJACSA), Vol. 16, No. 2., p. 45-59, 2025.</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://thesai.org/Publications/ViewPaper?Volume=16&Issue=2&Code=IJACSA&SerialNo=5" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-link"></i> DOI</a>
+                                <a href="https://thesai.org/Downloads/Volume16No2/Paper_5-Exploiting_Ray_Tracing_Technology_Through_OptiX.pdf" class="btn btn-sm btn-outline-danger"><i class="fas fa-file-pdf"></i> PDF</a>
+                                <a href="https://arxiv.org/pdf/2408.14247v1" class="btn btn-sm btn-outline-danger"><i class="fas fa-file-pdf"></i> arXiv</a>
+                                <a href="https://github.com/berenger-eu/particle-interaction-with-optix" class="btn btn-sm btn-outline-dark" target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <h3 class="text-uppercase text-secondary mb-4 mt-2">Conférences Internationales</h3>
+
+                         <div class="pub-item">
+                            <div class="pub-title">Arc Blanc: A Real-Time Ocean Simulator</div>
+                            <div class="pub-authors">David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau</div>
+                            <div class="pub-venue">ACM SIGGRAPH Symposium on Interactive 3D Graphics and Games (I3D 2025).</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://i3dsymposium.org/2025/papers.html" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-globe"></i> Conférence</a>
+                            </div>
+                        </div>
+
+                        <div class="pub-item">
+                            <div class="pub-title">Efficient GPU Implementation of Particle Interactions with Cutoff Radius and Few Particles per Cell</div>
+                            <div class="pub-authors">David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau</div>
+                            <div class="pub-venue">International Symposium on Parallel Computing and Distributed Systems (PCDS), 2024.</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://ieeexplore.ieee.org/document/10743892" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-link"></i> IEEE Xplore</a>
+                                <a href="http://arxiv.org/abs/2406.16091" class="btn btn-sm btn-outline-danger"><i class="fas fa-file-pdf"></i> arXiv</a>
+                            </div>
+                        </div>
+
+                        <hr>
+                        <h3 class="text-uppercase text-secondary mb-4 mt-2">Conférences Nationales & Présentations</h3>
+
+                         <div class="pub-item">
+                            <div class="pub-title">Arc Blanc: Un Simulateur d'océan Temps Réel</div>
+                            <div class="pub-authors">David Algis, Bérenger Bramas, Emmanuelle Darles, Lilian Aveneau</div>
+                            <div class="pub-venue">Journées Françaises de l'Informatique Graphique (JFIG), Strasbourg, 2024.</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://hal.science/hal-05015350" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-archive"></i> HAL</a>
+                            </div>
+                        </div>
+                        
+                        <div class="pub-item">
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-microphone-alt text-primary"></i> <strong>ANRT 2023 :</strong> Présentation sur la durabilité des océans. <a href="assets/pdf/durabilite-ocean.pdf">[Slides]</a></li>
+                                <li><i class="fas fa-microphone-alt text-primary"></i> <strong>GTAS 2024 :</strong> Simulation d'océan temps réel. <a href="assets/pdf/gtas24.pdf">[Slides]</a></li>
+                            </ul>
+                        </div>
+
+                        <hr>
+                        <h3 class="text-uppercase text-secondary mb-4 mt-2">Autres</h3>
+
+                         <div class="pub-item">
+                            <div class="pub-title">Hybridation de la méthode de Tessendorf et de l'hydrodynamique des particules lissées pour la simulation d'océan en temps réel</div>
+                            <div class="pub-authors">David Algis</div>
+                            <div class="pub-venue">Manuscrit de thèse</div>
+                            <div class="pub-links mt-2">
+                                <a href="https://hal.science/tel-05401162" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-archive"></i> HAL</a>
+                                <a href="https://github.com/davidAlgis/soutenance" class="btn btn-sm btn-outline-primary" target="_blank"><i class="fas fa-archive"></i> Slides</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="page-section portfolio" id="projects">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-secondary mb-0">Projets</h2>
                 <div class="divider-custom">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-laptop-code"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-				<div class="row">
-                    <!-- Portfolio Item 6-->
-                    <div class="col-md-6 col-lg-4 mb-5">
-                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
-                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
-                            </div>
-                            <img class="img-fluid" src="assets/img/portfolio/keyplan3d.png" alt="" />
-                        </div>
-                    </div>
-
-                    <!-- Portfolio Item 6-->
+                <div class="row justify-content-center">
+                    
                     <div class="col-md-6 col-lg-4 mb-5">
                         <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7">
                             <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
-                                <div class="portfolio-item-caption-content text-center text-white"><i class="fas fa-plus fa-3x"></i></div>
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <div class="text-uppercase font-weight-bold">Simulation Océan</div>
+                                    <div>Arc Blanc</div>
+                                </div>
                             </div>
-                            <img class="img-fluid" src="assets/img/portfolio/arcblanc.png" alt="" />
+                            <img class="img-fluid" src="assets/img/portfolio/arcblanc.png" alt="Arc Blanc Ocean Simulation" />
                         </div>
                     </div>
-                </div>
+
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal7">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <div class="text-uppercase font-weight-bold">Interopérabilité</div>
+                                    <div>InteropUnityCUDA</div>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/logo_iuc_wide.png" alt="InteropUnityCUDA" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <div class="text-uppercase font-weight-bold">Maths & Archi.</div>
+                                    <div>Keyplan 3D</div>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/keyplan3d.png" alt="Keyplan 3D" />
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 mb-5">
+                        <div class="portfolio-item mx-auto" data-toggle="modal" data-target="#portfolioModal6">
+                            <div class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100">
+                                <div class="portfolio-item-caption-content text-center text-white">
+                                    <div class="text-uppercase font-weight-bold">pyDot2Dot</div>
+                                    <div>Puzzle point par point</div>
+                                </div>
+                            </div>
+                            <img class="img-fluid" src="assets/img/portfolio/pydot2dot.jpeg" alt="Keyplan 3D" />
+                        </div>
+                    </div>
+
+                    </div>
             </div>
         </section>
-        <!-- Formation Section-->
-        <section class="page-section bg-primary text-white mb-0" id="about">
-			<div class="container">
-                <!-- Contact Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Formations</h2>
-				<!-- Icon Divider-->
+
+        <section class="page-section bg-primary text-white mb-0" id="education">
+            <div class="container">
+                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Formation & Enseignement</h2>
                 <div class="divider-custom divider-light">
                     <div class="divider-custom-line"></div>
                     <div class="divider-custom-icon"><i class="fas fa-graduation-cap"></i></div>
                     <div class="divider-custom-line"></div>
                 </div>
-                <!-- Contact Section Form-->
                 <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <ul>
-						  <li><p class="lead">Doctorat en mathématiques et informatique, Université de Poitiers 2022-Aujourd'hui</p></li>
-                          <li><p class="lead">Master mathématiques et informatique appliquées, Université de Strasbourg 2018-2020</p></li>
-						  <li><p class="lead">L3, Magistère de mathématiques, Université de Strasbourg 2017-2018</p></li>
-						  <li><p class="lead">Bi-licence, mathématiques physique approfondies, Université de Strasbourg 2015-2017</p></li>
-						</ul> 
+                    <div class="col-lg-6 ml-auto">
+                        <h4 class="text-uppercase mb-3">Parcours Universitaire</h4>
+                        <ul class="lead">
+                            <li><strong>2022-2025 :</strong> Doctorat en Informatique (XLIM, Univ. Poitiers). 
+                            <li><strong>2018-2020 :</strong> Master Calcul Scientifique et Mathématiques de l'Information (Univ. Strasbourg).</li>
+                            <li><strong>2017-2018 :</strong> Magistère de Mathématiques Fondamentales (Univ. Strasbourg).</li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 mr-auto">
+                         <h4 class="text-uppercase mb-3">Activités d'Enseignement</h4>
+                         <ul class="lead">
+                            <li><strong>CNAM Nouvelle Aquitaine :</strong> Mathématiques pour l'ingénieur, Mathématiques pour le divertissement numérique.</li>
+                            <li><strong>Encadrement :</strong> Projets étudiants et alternants (Studio Nyx).</li>
+                         </ul>
+                         <div class="text-center mt-4">
+                             <a class="btn btn-xl btn-outline-light" href="assets/pdf/CV_David_Algis.pdf">
+                                 <i class="fas fa-download mr-2"></i>
+                                 Télécharger mon CV
+                             </a>
+                         </div>
                     </div>
                 </div>
             </div>
         </section>
-		
-		<!-- Travaux Section-->
-        <section class="page-section" id="works">
-			<div class="container">
-                <!-- Contact Section Heading-->
-				<h2 class="page-section-heading text-center text-uppercase text-black">Travaux</h2>
-				<!-- Icon Divider-->
-                <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-book"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- Contact Section Form-->
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-						<ul>
-							<li><p class="lead"><a href="http://arxiv.org/abs/2406.16091">David Algis, Berenger Bramas, Emmanuelle Darles, Lilian Aveneau. Efficient GPU Implementation of Particle Interactions with Cutoff Radius and Few Particles per Cell. PCDS 2024, 2024</a><a class="btn" href="http://arxiv.org/abs/2406.16091"><i class="fas fa-file-alt"></i></a></p></li>
-                            <li><p class="lead"><a href="assets/pdf/durabilite-ocean.pdf">Support de présentation pour une conférence de l'ANRT sur la durabilité des océan</a><a class="btn" href="assets/pdf/durabilite-ocean.pdf"><i class="fas fa-file-alt"></i></a></p></li>
-                            <li><p class="lead"><a href="assets/pdf/gtas24.pdf">Support de présentation pour le GTAS 2024 sur la simulation d'océan en temps réel</a><a class="btn" href="assets/pdf/gtas24.pdf"><i class="fas fa-file-alt"></i></a></p></li>
-                            <!-- <li><p class="lead"><a href="assets/pdf/Intuitionnisme 84.pdf">Remise en forme de : <i>Intuitionnisme 84</i> par Jacques Hartong et Georges Reeb. </a><a class="btn" href="assets/pdf/Intuitionnisme 84.pdf"><i class="fas fa-file-alt"></i></a></p></li> -->
-							<li><p class="lead"><a href="assets/pdf/Rapport_de_stage.pdf">Formalisation mathématiques de principes architecturaux</a> <a class="btn" href="assets/pdf/Rapport_de_stage.pdf"><i class="fas fa-file-alt"></i></a></p></li> <!-- found on https://mdbootstrap.com/docs/jquery/content/icons-list/?-->
-							<li><p class="lead"><a href="assets/pdf/calcul_quantique_rendu_3d_temps_reel.pdf">Calcul quantique pour le rendu 3D en temps réel</a> <a class="btn" href="assets/pdf/calcul_quantique_rendu_3d_temps_reel.pdf"><i class="fas fa-file-alt"></i></a></p></li> <!-- found on https://mdbootstrap.com/docs/jquery/content/icons-list/?-->
-							<li><p class="lead"><a href="assets/pdf/calcul_hybride_quantique_classique.pdf">Calcul Hybride Quantique-Classique</a> <a class="btn" href="assets/pdf/calcul_hybride_quantique_classique.pdf"><i class="fas fa-file-alt"></i></a></p></li>
-							<li><p class="lead"><a href="assets/pdf/cours_introduction_calcul_quantique.pdf">Une introduction au calcul quantique rédigée en collaboration avec Léo Bois</a> <a class="btn" href="assets/pdf/cours_introduction_calcul_quantique.pdf"><i class="fas fa-file-alt"></i></a></p></li> <!-- found on https://mdbootstrap.com/docs/jquery/content/icons-list/?-->
-							<li><p class="lead"><a href="assets/pdf/memoire.pdf">Introduction au langage de catégorie pour la théorie du Topos</a>  <a class="btn" href="assets/pdf/memoire.pdf"><i class="fas fa-file-alt"></i></a></p></li>
-						</ul> 
-                    </div>
-                </div>
-            </div>
-        </section>
-		
-        <!-- About Section-->
-        <section class="page-section bg-primary text-white mb-0" id="contact">
-			<div class="container">
-                <!-- About Section Heading-->
-                <h2 class="page-section-heading text-center text-uppercase text-white mb-0">Quelques mots sur moi</h2>
-				<!-- Icon Divider-->
-                <div class="divider-custom divider-light">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon"><i class="fas fa-gamepad"></i></div>
-                    <div class="divider-custom-line"></div>
-                </div>
-                <!-- About Section Content-->
-                <div class="row">
-					<div class="col-lg-10 mx-auto">
-						<p class="lead" align="justify">
-							Le dernier d'une fratrie, j'ai découvert, par eux, le jeux vidéo très tôt dans mon enfance. Cela a commencé avec l'incroyable génération de jeux sur PS2,
-							qui font d'ailleurs toujours partie de mes jeux préférés (<a href="https://www.gamekult.com/jeux/ratchet-clank-3-59492/test.html" style="color:#002e45"><i>Ratchet et Clank 3</i></a>, 
-							<a href="https://www.gamekult.com/jeux/james-bond-007-nightfire-3010000957/test.html" style="color:#002e45"><i>007 Nightfire</i></a>, etc...). 
-							Ainsi, j'ai grandi avec cette passion et j'ai décidé dès le collège que j'en ferai mon métier. <br/> 
-							C'est pourquoi je me suis orienté vers une formation scientifique et j'y ai découvert plusieurs nouvelles passions : d'abord les mathématiques et la physique, puis la philosophie. 
-							J'ai donc développé ces passions en licence à la faculté et j'ai achevé mon cursus en trouvant, par l'informatique, une façon de les appliquer. <br/>
-							En parallèle de ma formation, dès mon adolescence, j'ai commencé à développer de nombreux jeux vidéo, d'abord sur flash, puis sur calculatrice (Ti-82) 
-							et enfin sur le moteur Unity, sur lequel je travaille avec énormément de plaisir.<br/>
-                            Je m'intéresse aussi à divers sujets académiques tels que <a href="https://www.senscritique.com/livre/la_structure_des_revolutions_scientifiques/92520"style="color:#002e45"><i>l'épistémologie</i></a>, <a href="https://www.senscritique.com/livre/La_Formule_du_Savoir/35193012"style="color:#002e45"><i>le Bayésianisme</i></a>, <a href="https://quantum-journal.org/papers/q-2018-08-06-79/pdf/"style="color:#002e45"><i>le calcul quantique</i></a>, <a href="https://arxiv.org/pdf/1108.1791"style="color:#002e45"><i>la théorie de la complexité</i></a> et <a href="https://bibnum.publimath.fr/IST/IST94033.pdf"style="color:#002e45"><i>les fondements des mathématiques</i></a>. <br/>
-							Par ailleurs, j'ai aussi une grande passion pour le cinéma, particulièrement pour le cinéma asiatique dont je suis très friand mais je reste curieux et éclectique.<br/>
-							Enfin, si je devais citer quelques références récentes qui m'ont beaucoup plu, je dirais dans le monde du jeux vidéo : 
-							<a href="https://www.gamekult.com/jeux/outer-wilds-3050878143/test.html" style="color:#002e45"><i>Outer Wild</i></a> et 
-							<a href="https://www.gamekult.com/jeux/fire-emblem-switch-3050841675/test.html" style="color:#002e45"><i>Fire Emblem Three Houses</i></a> ; dans le cinéma : 
-							<a href="https://www.senscritique.com/film/The_Strangers/12986412" style="color:#002e45"><i>The Strangers</i></a> et <a href="https://www.senscritique.com/film/Whiplash/10777058" style="color:#002e45"><i>Whiplash</i></a>.  
-							Si vous souhaitez en savoir un davantage sur mes goûts, je vous invite à jeter un oeil à mon profil <a href="https://www.senscritique.com/lufydad" style="color:#002e45">SensCritique</a>.
-						</p>
-					</div>
-				</div>
-            </div>
-        </section>
-        <!-- Footer-->
+        
         <footer class="footer text-center">
             <div class="container">
                 <div class="row">
-                    <!-- Footer Social Icons-->
-                    <div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">LinkedIn</h4>
-							<a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/david-algis-5b34b4171/"><i class="fab fa-fw fa-linkedin-in"></i></a>
-                    </div>
-					<div class="col-lg-4 mb-5 mb-lg-0">
-                        <h4 class="text-uppercase mb-4">GitHub</h4>
-							<a class="btn btn-outline-light btn-social mx-1" href="https://github.com/davidAlgis"><i class="fab fa-github"></i></a>
+                    <div class="col-lg-4 mb-5 mb-lg-0 mx-auto">
+                        <h4 class="text-uppercase mb-4">Contact & Réseaux</h4>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://www.linkedin.com/in/david-algis-5b34b4171/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="https://github.com/davidAlgis"><i class="fab fa-github"></i></a>
+                        <a class="btn btn-outline-light btn-social mx-1" href="mailto:david.algis@tutamail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
             </div>
         </footer>
-        <!-- Copyright Section-->
+        
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright © davidAlgis.github.io 2024</small></div>
+            <div class="container"><small>Copyright © David Algis 2025 - Recherche & Développement</small></div>
         </div>
-        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
+        
         <div class="scroll-to-top d-lg-none position-fixed">
             <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
         </div>
-        <!-- Portfolio Modals-->
-		<div class="portfolio-modal modal fade" id="hangGliderRacing" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-							<div class="row justify-content-center">
-								<p>
-									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Hang-Glider Racing</h2><br/>
-								</p>
-							</div>
-							<p></p>
-							<div class="row justify-content-center">
-								<iframe width="900" height="506" src="https://www.youtube.com/embed/kwBw52MnZgc" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-								<div class="col-lg-8">
-                                    <p class="mb-5" align="justify">
-										Hang-Glider Racing est un jeu hyper casual développé pour android. 
-										Le joueur incarne un deltaplane qu'il doit amener plus loin que les deltaplanes de ses adversaires. 
-										Le jeu est disponible <a href="https://davidalgis.itch.io/hang-glider-racing">ici</a>.
-									</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 1-->
-        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-							<div class="row justify-content-center">
-								<p>
-									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Hunt for Knowledge</h2><br />
-								</p>
-							</div>
-							<p></p>
-							<div class="row justify-content-center">
-								<iframe width="800" height="450" src="https://www.youtube.com/embed/TJQcyBJ2bRs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="col-lg-8">
-                                    <p class="mb-5" align="justify">
-										Hunt for knowledge est un jeu d'aventure à la première personne disponible gratuitement à 
-										<a href="https://davidalgis.itch.io/hunt-for-knowledge">cette adresse </a>.
-										Le personnage incarné par le joueur part à la recherche d'un trésor caché d'une ancienne civilisation. 
-										Pour découvrir sa cachette, le joueur doit réussir à traduire le langage de cette civilisation.
-										Ce jeu a été créé en 6 jours dans le contexte de la <a href="http://www.weeklygamejam.com/">Weekly Game Jam - Week 169 </a>.
-									</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Modal 2-->
-        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-								<p>
-									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Jump !!</h2><br />
-								</p>
-							</div>
-							<p></p>
-							<div class="row justify-content-center">
-								<iframe width="800" height="450" src="https://www.youtube.com/embed/2TkpPlhb2dk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                                <div class="col-lg-8">
-									<p></p>
-                                    <p class="mb-5"  align="justify">
-										Jump !! est un jeu de plateforme cooperatif en 2D développé pour périphériques Android.
-										Chaque joueur voit le niveau de l'autre joueur, ainsi la seule façon d'éviter les pièges et de communiquer aux autres joueurs quand il faut sauter.
-									</p>
-                                    <button class="btn btn-primary" data-dismiss="modal">
-                                        <i class="fas fa-times fa-fw"></i>
-                                        Close Window
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio RTS-->
-        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-							<div class="row justify-content-center">
-								<div class="col-lg-8">
-									<!-- Portfolio Modal - Text-->
-									<p class="mb-5" align="justify">
-										Il s'agit d'un jeu de stratégie en temps réel en développement sur PC. Celui-ci est conçu comme un héritier d'<i>Age of Empire</i> avec un aspect davantage stratégique sur l'économie. 
-										C'est à dire qu'il reprend la structure assez simple d'<i>Age of empire</i> et y rajoute à cela une dynamique commerciale. En effet, les ressources seront rares sur la carte, cela incitera les joueurs à coopérer économiquement.
-									</p>
-								</div>
-							</div>
-							<table>
-								<tr>
-									<th>
-										<img src="assets/img/portfolio/demonstrationRTS1.gif" width=500 />
-									</th>
-									<th>
-										<img src="assets/img/portfolio/demonstrationRTS2.gif" width=500 />
-									</th>
-								</tr>
-							</table>
-							<button class="btn btn-primary" data-dismiss="modal">
-								<i class="fas fa-times fa-fw"></i>
-								Close Window
-							</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Braquage-->
-        <div class="portfolio-modal modal fade" id="portfolioModal4" tabindex="-1" role="dialog" aria-labelledby="portfolioModal4Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-                            <div class="row justify-content-center">
-                                <div class="col-lg-8">
-									<!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Braquage</h2>
-									<p></p>
-									<p  align="justify">
-                                    Braquage est un projet imaginé depuis 2014 est dont le développement a commencé fin 2019. L'idée du projet émane des jeux <i>Payday 2</i>
-									et <i>Rainbow Six Siege</i> ou plus précisément du trailer de l'E3 2014 de <i>Rainbow Six Siege</i>. En effet, l'idée de Braquage est de conserver
-									le level design des casses de <i>Payday 2</i>, en ajoutant à cela une longue réflexion en amont sur le braquage motivé par une sorte de permadeath,
-									celle-ci inspirée donc de Rainbow Six Siege.<br/>
-									Plus concrètement, il s'agit d'un jeu à la première personne dont l'ambition serait d'avoir un petit quartier citadin avec plusieurs banques.
-									Le joueur devrait être complétement libre dans ce quartier et entièrement libre sur la décision du braquage à entreprendre. 
-									De plus le casse de chaque banque pourra être fait de multiples façons. Néanmoins la complexité à priori du casse obligera le joueur à 
-									planifier longuement son braquage.
-									</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio ATK dachat-->
-        <div class="portfolio-modal modal fade" id="portfolioModal5" tabindex="-1" role="dialog" aria-labelledby="portfolioModal5Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-							<div class="row justify-content-center">
-                                <div class="col-lg-8">
-									<!-- Portfolio Modal - Title-->
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">L'attaque des Dachats</h2>
-									<p></p>
-									L'attaque des Dachats est un jeu d'aventure 2D en vue de dessus fait pour et avec des amis, en utilisant les assets graphiques de l'excellent jeu <i>Stardew Valley</i>. 
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Portfolio Keyplan-->
-        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
-            <div class="modal-dialog modal-xl" role="document">
-                <div class="modal-content">
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
-                    </button>
-                    <div class="modal-body text-center">
-                        <div class="container">
-							<div class="row justify-content-center">
-								<p>
-									<h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Keyplan 3D</h2><br />
-								</p>
-							</div>
-								<p></p>
-							<div class="row justify-content-center">
-								<img src="assets/img/portfolio/keyplan3d.png" width=700 />
-								<p></p>
-								<div class="col-lg-8">
-                                    <p class="mb-5"  align="justify">
-										J'ai travaillé chez Quasarts qui est une entreprise qui développe une application iOS d’architecture grand public
-										<i>Keyplan3D</i>. Celle-ci permet de créer rapidement et simplement des pièces, d’y rajouter de
-										l’immobilier, des objets de la vie quotidienne, mais aussi de changer le parquet ou encore de
-										personnaliser la tapisserie. <br/>
-										L'application est développée en <i>C++/Objective-C/Swift</i> et utilise l'<i>API OpenGL</i>. <br/>
-										Ma mission était d'ajouter de nouvelles fonctionnalités à l'application et de les formaliser mathématiquement, notamment pouvoir paramétrer la hauteur des murs. Vous pourrez lire plus de détails <a class="btn" href="assets/pdf/Rapport_de_stage.pdf">ici</a>.
-										<p></p>
 
-										<p></p>
-									</p>
-                                </div>
-								<table>
-									<tr>
-										<th>
-											<img src="assets/img/portfolio/demonstrationkeyplan1.gif" width=500 />
-										</th>
-										<th>
-											<img src="assets/img/portfolio/demonstrationkeyplan2.gif" width=500 />
-										</th>
-									</tr>
-								</table>
-								<button class="btn btn-primary" data-dismiss="modal">
-									<i class="fas fa-times fa-fw"></i>
-									Close Window
-								</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="portfolio-modal modal fade" id="portfolioModal7" tabindex="-1" role="dialog" aria-labelledby="portfolioModal7Label" aria-hidden="true">
             <div class="modal-dialog modal-xl" role="document">
                 <div class="modal-content">
@@ -457,17 +325,56 @@
                     <div class="modal-body text-center">
                         <div class="container">
                             <div class="row justify-content-center">
+                                <div class="col-lg-8">
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal7Label">Arc Blanc</h2>
+                                    <div class="divider-custom">
+                                        <div class="divider-custom-line"></div>
+                                        <div class="divider-custom-icon"><i class="fas fa-water"></i></div>
+                                        <div class="divider-custom-line"></div>
+                                    </div>
+                                    <img class="img-fluid rounded mb-5" src="assets/img/portfolio/lateral_moving_boat.gif" alt="" />
+                                    <p class="mb-5 text-justify">
+                                        Dans le cadre de ma thèse CIFRE avec <strong>Studio Nyx</strong> et le laboratoire <strong>XLIM</strong>, j'ai développé un simulateur d'océan temps réel.
+                                        <br><br>
+                                    </p>
+                                    <button class="btn btn-primary" data-dismiss="modal">
+                                        <i class="fas fa-times fa-fw"></i>
+                                        Fermer
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-modal modal fade" id="portfolioModal6" tabindex="-1" role="dialog" aria-labelledby="portfolioModal6Label" aria-hidden="true">
+            <div class="modal-dialog modal-xl" role="document">
+                <div class="modal-content">
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                    </button>
+                    <div class="modal-body text-center">
+                        <div class="container">
+                            <div class="row justify-content-center">
                                 <p>
-                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Arc Blanc</h2><br />
+                                    <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Keyplan 3D</h2><br />
                                 </p>
                             </div>
                                 <p></p>
                             <div class="row justify-content-center">
-                                <img src="assets/img/portfolio/arcblanc.png" width=700 />
+                                <img src="assets/img/portfolio/keyplan3d.png" width=700 />
                                 <p></p>
                                 <div class="col-lg-8">
                                     <p class="mb-5"  align="justify">
-                                        Je travaille avec Studio Nyx pour développer de nouvelles méthodes de simulation d'océan en temps réel.
+                                        J'ai travaillé chez Quasarts qui est une entreprise qui développe une application iOS d’architecture grand public
+                                        <i>Keyplan3D</i>. Celle-ci permet de créer rapidement et simplement des pièces, d’y rajouter de
+                                        l’immobilier, des objets de la vie quotidienne, mais aussi de changer le parquet ou encore de
+                                        personnaliser la tapisserie. <br/>
+                                        L'application est développée en <i>C++/Objective-C/Swift</i> et utilise l'<i>API OpenGL</i>. <br/>
+                                        Ma mission était d'ajouter de nouvelles fonctionnalités à l'application et de les formaliser mathématiquement, notamment pouvoir paramétrer la hauteur des murs. Vous pourrez lire plus de détails <a class="btn" href="assets/pdf/Rapport_de_stage.pdf">ici</a>.
+                                        <p></p>
 
                                         <p></p>
                                     </p>
@@ -475,10 +382,10 @@
                                 <table>
                                     <tr>
                                         <th>
-                                            <img src="assets/img/portfolio/demoArcBlanc1.png" width=500 />
+                                            <img src="assets/img/portfolio/demonstrationkeyplan1.gif" width=500 />
                                         </th>
                                         <th>
-                                            <img src="assets/img/portfolio/tsunami.gif" width=500 />
+                                            <img src="assets/img/portfolio/demonstrationkeyplan2.gif" width=500 />
                                         </th>
                                     </tr>
                                 </table>
@@ -492,15 +399,12 @@
                 </div>
             </div>
         </div>
-        <!-- Bootstrap core JS-->
+
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
-        <!-- Third party plugin JS-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-        <!-- Contact form JS-->
         <script src="assets/mail/jqBootstrapValidation.js"></script>
         <script src="assets/mail/contact_me.js"></script>
-        <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
 </html>
